@@ -6,7 +6,7 @@ region = "us-east-1"
 resource "aws_instance" "one" {
   ami             = "ami-0fe630eb857a6ec83"
   instance_type   = "t2.micro"
-  key_name        = "studentkeypair"
+  key_name        = "Practiekeypair"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1a"
   user_data       = <<EOF
@@ -25,7 +25,7 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-0fe630eb857a6ec83"
   instance_type   = "t2.micro"
-  key_name        = "studentkeypair"
+  key_name        = "Practiekeypair"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1b"
   user_data       = <<EOF
@@ -44,7 +44,7 @@ EOF
 resource "aws_instance" "three" {
   ami             = "ami-0fe630eb857a6ec83"
   instance_type   = "t2.micro"
-  key_name        = "studentkeypair"
+  key_name        = "Practiekeypair"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1a"
   tags = {
@@ -55,7 +55,7 @@ resource "aws_instance" "three" {
 resource "aws_instance" "four" {
   ami             = "ami-0fe630eb857a6ec83"
   instance_type   = "t2.micro"
-  key_name        = "studentkeypair"
+  key_name        = "Practiekeypair"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "us-east-1b"
   tags = {
