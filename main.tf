@@ -87,12 +87,16 @@ resource "aws_security_group" "five" {
   }
 }
 
-resource "aws_s3_bucket_versioning" "six" {
+resource "aws_s3_bucket" "six" {
 bucket = "devopsbynikhil0204"
 acl = "private"
-versioning { 
-  enabled = true
-  }
+}
+
+resource "aws_s3_bucket_versioning" "six_versioning" {
+bucket = aws_s3_bucket.six.id
+versioning_configuration {
+enabled = true
+} 
 }
 
 resource "aws_iam_user" "seven" {
