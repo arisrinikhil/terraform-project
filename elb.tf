@@ -1,6 +1,6 @@
 resource "aws_elb" "bar" {
-  name               = "raham-terraform-elb"
-  availability_zones = ["ap-southeast-1a", "ap-southeast-1b"]
+  name               = "nikhil-terraform-elb"
+  availability_zones = ["ap-south-1a", "ap-south-1b"]
 
   listener {
     instance_port     = 80
@@ -25,19 +25,19 @@ resource "aws_elb" "bar" {
   }
 }
 
- /*resource "aws_rds_cluster" "default" {
+ resource "aws_rds_cluster" "default" {
   cluster_identifier      = "aurora-cluster-demo"
   engine                  = "aurora-mysql"
   engine_version          = "5.7.mysql_aurora.2.11.2"
-  availability_zones      = ["ap-southeast-1a", "ap-southeast-1b"]
+  availability_zones      = ["ap-south-1a", "ap-south-1b"]
   database_name           = "mydb"
-  master_username         = "raham"
-  master_password         = "Rahamshaik#444555"
+  master_username         = "nikhil"
+  master_password         = "Nikhil#0402"
   backup_retention_period = 5
   preferred_backup_window = "07:00-09:00"
-}*/
 
-/*resource "aws_instance" "one" {
+
+resource "aws_instance" "one" {
   for_each = toset(["one", "two", "three"])
   ami           = "ami-006be9ab6a140de6e"
   instance_type = "t2.micro"
@@ -45,4 +45,4 @@ resource "aws_elb" "bar" {
     Name = "instance-${each.key}"
   }
 }
-*/
+
