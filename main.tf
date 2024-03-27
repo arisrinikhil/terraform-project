@@ -92,13 +92,6 @@ bucket = "devopsbynikhil0204"
 acl = "private"
 }
 
-resource "aws_s3_bucket_versioning" "six_versioning" {
-bucket = aws_s3_bucket.six.id
-versioning_configuration {
-enabled = true
-} 
-}
-
 resource "aws_iam_user" "seven" {
 for_each = var.user_names
 name = each.value
