@@ -87,7 +87,7 @@ resource "aws_security_group" "five" {
   }
 }
 
-resource "aws_s3_bucket"  {
+resource "aws_s3_bucket" "six" {
 bucket = "devopsbynikhil0204"
 acl = "enabled"
 }
