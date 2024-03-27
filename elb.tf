@@ -37,12 +37,12 @@ resource "aws_elb" "bar" {
   preferred_backup_window = "07:00-09:00"
 }
 
-resource "aws_instance" "one" {
+/*resource "aws_instance" "one" {
   for_each = toset(["one", "two", "three"])
   ami           = "ami-006be9ab6a140de6e"
   instance_type = "t2.micro"
   tags = {
     Name = "instance-${each.key}"
   }
-}
+}*/
 
