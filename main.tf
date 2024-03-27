@@ -87,7 +87,7 @@ resource "aws_security_group" "five" {
   }
 }
 
-resource "aws_s3_bucket" "six" {
+resource "aws_s3_bucket_versioning" "six" {
 bucket = "devopsbynikhil0204"
 acl = "private"
 versioning { 
